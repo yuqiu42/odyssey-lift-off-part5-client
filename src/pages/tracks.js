@@ -1,7 +1,8 @@
-import React from 'react';
-import { useQuery, gql } from '@apollo/client';
-import TrackCard from '../containers/track-card';
-import { Layout, QueryResult } from '../components';
+import { gql, useQuery } from "@apollo/client";
+import React from "react";
+
+import { Layout, QueryResult } from "../components";
+import TrackCard from "../containers/track-card";
 
 /** TRACKS gql query to retreive all tracks */
 const TRACKS = gql`
@@ -10,7 +11,7 @@ const TRACKS = gql`
       id
       title
       thumbnail
-      length
+      durationInSeconds
       modulesCount
       author {
         name
